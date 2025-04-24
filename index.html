@@ -1,0 +1,230 @@
+<!DOCTYPE html>  
+<html lang="id">  
+<head>  
+  <meta charset="UTF-8" />  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
+  <title>FAMZZ PROJECT STORE</title>  
+  <style>  
+    body, html {  
+      margin: 0;  
+      padding: 0;  
+      height: 100%;  
+      font-family: Arial, sans-serif;  
+    }  
+    .background {  
+      position: fixed;  
+      top: 0;  
+      left: 0;  
+      width: 100%;  
+      height: 100%;  
+      background-image: url('https://files.catbox.moe/1zsai9.jpg');  
+      background-size: cover;  
+      background-position: center;  
+      filter: blur(12px);  
+      z-index: -1;  
+    }  
+
+    header, .container, footer {  
+      position: relative;  
+      z-index: 1;  
+    }  
+
+    header {  
+      background-color: rgba(33, 150, 243, 0.8);  
+      color: white;  
+      padding: 20px;  
+      text-align: center;  
+    }  
+
+    .container {  
+      padding: 20px;  
+      display: flex;  
+      flex-wrap: wrap;  
+      justify-content: space-around;  
+    }  
+
+    .product {  
+      background: rgba(255, 255, 255, 0.95);  
+      border-radius: 8px;  
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);  
+      width: 250px;  
+      margin: 10px;  
+      padding: 15px;  
+      text-align: center;  
+    }  
+
+    .product img {  
+      width: 100%;  
+      height: auto;  
+    }  
+
+    .product h3 {  
+      margin: 10px 0 5px;  
+    }  
+
+    .product p {  
+      margin: 0 0 10px;  
+      color: #555;  
+    }  
+
+    .btn {  
+      background-color: #2196f3;  
+      color: white;  
+      padding: 10px 15px;  
+      text-decoration: none;  
+      border-radius: 25px;  
+      border: none;  
+      cursor: pointer;  
+    }  
+
+    footer {  
+      text-align: center;  
+      padding: 15px;  
+      background-color: rgba(221, 221, 221, 0.8);  
+      margin-top: 30px;  
+    }
+
+    .popup {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.5);
+    }
+    
+.popup-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+
+  /* Tambahan untuk posisi tengah */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+    
+
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    .close:hover {
+      color: #000;
+    }
+  </style>  
+</head>  
+<body>    
+  <div class="background"></div>    
+
+  <!-- Mulai konten utama -->
+  <div id="main-content">
+    <header>  
+      <h1>PROJECT FAMZZ STORE⚙️</h1>  
+      <p>TUTORIAL BUY : PILIH PRODUK YANG KAMU INGIN SETELAH ITU KLIK TOMBOL "BUY" NANTI MUNCUL POP-UP</p>  
+    </header>
+
+    <div class="container">  
+      <div class="product">  
+        <img src="https://files.catbox.moe/7itpdx.jpg" alt="Produk 1">  
+        <h3>FOTO HD+ 💀</h3>  
+        <p>Rp 10.000</p>  
+        <button class="btn" onclick="showPopup(1)">ORDER</button>  
+      </div>  
+      <div class="product">  
+        <img src="https://files.catbox.moe/7itpdx.jpg" alt="Produk 2">  
+        <h3>FILE FREE FIRE ⚙️</h3>  
+        <p>Rp 35.000 - Rp 170.000</p>  
+        <button class="btn" onclick="showPopup(2)">ORDER</button>  
+      </div>  
+      <div class="product">  
+        <img src="https://files.catbox.moe/7itpdx.jpg" alt="Produk 3">  
+        <h3>SEND VIRTEX WHATSAPP 👾</h3>  
+        <p>Rp 15.000</p>  
+        <button class="btn" onclick="showPopup(3)">ORDER</button>  
+      </div>  
+      <div class="product">  
+        <img src="https://files.catbox.moe/7itpdx.jpg" alt="Produk 4">  
+        <h3>RISET HANDPHONE JARAK JAUH 🤖</h3>  
+        <p>Rp 25.000</p>  
+        <button class="btn" onclick="showPopup(4)">ORDER</button>  
+      </div>  
+    </div>  
+
+    <footer>  
+      &copy; 2025 @famzzproject  
+    </footer>  
+  </div>
+  <!-- Tutup main-content -->
+
+  <!-- Pop-ups unik -->
+  <div id="popup1" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup(1)">&times;</span>
+      <p>FOTO HD+ ADALAH MENGUBAH RESOLUSI FOTO MENJADI LEBIH HD DAN SEPERTI HIDUP</p>
+      <p>ORDER SEKARANG DI BAWAH</p>
+      <a href="https://wa.me/62895417541703?text=*PERMISI+KAK+MAU+HD+IN+FOTO*"class="btn">BUY🛒</a>  
+      <p>JIKA INGIN MELIHAT CONTOHNYA BISA TANYAKAN ADMIN DI BAWAH</p>
+           <a href="https://wa.me/62895417541703?text=*KAK+MAU+LIAT+CONTOH+FOTO+YANG+SUDAH+HD*" class="btn">KONTAK ADMIN</a>  
+    </div>
+  </div>
+
+  <div id="popup2" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup(2)">&times;</span>
+      <p>BENEFIT FILE : MEMPERMUDAH MENDAPATKAN HS,LAYAR MENJADI RESPONSIF,ANTI BL,SUDAH AMAN 100%</p>
+      <p>ORDER SEKARANG DI BAWAH</p>
+           <a href="https://wa.me/62895417541703?text=*PERMISI+KAK,+MAU+ORDER+FILE+FREE+FIRE*" class="btn">BUY🛒</a>  
+           <p>TESTI FILE TANYAKAN ADMIN DI BAWAH</p>
+                <a href="https://wa.me/62895417541703?text=*PERMISI+KAK+,BOLEH+LIAT+TESTI+FILENYA?*" class="btn">KONTAK ADMIN</a>  
+    </div>
+  </div>
+
+  <div id="popup3" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup(3)">&times;</span>
+      <p>VIRTEX ADALAH SEBUAH BUG WHATSAPP YANG BERBAHAYA, JIKA KORBAN TERKENA VIRTEX OTOMATIS WHATSAPP DAN HANDPHONE KORBAN TIDAK BISA DI GUNAKAN SEPERTI BIASA</p>
+      <p>ORDER SEKARANG DI BAWAH</p>
+      <a href="https://wa.me/62895417541703?text=*KAK+MAU+BUG+NOMER+WHATSAPP*" class="btn">BUY🛒</a>
+      <p>TAMPILAN MENU BISA DI LIHAT DARI SINI</p>
+      <a href="https://wa.me/62895338367507?text=.menu" class="btn">KONTAK ADMIN</a>
+    </div>
+  </div>
+
+  <div id="popup4" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup(4)">&times;</span>
+      <p>INTINYA RISET HP KORBAN DARI JARAK JAUH</p>
+      <p>ORDER AE DI SINI</p>
+      <a href="https://wa.me/62895417541703?text=*BG+MAU+RISET+HP+ORANG*" class="btn">BUY🛒</a>
+      <p>BANYAK TANYA ORANG STRES</p>
+    </div>
+  </div>
+
+  <!-- Musik -->
+  <audio autoplay loop>
+    <source src="https://files.catbox.moe/nuercj.mp3" type="audio/mpeg">
+    Browser kamu tidak mendukung audio.
+  </audio>
+
+  <!-- Script -->
+  <script>
+    function showPopup(id) {
+      document.getElementById("popup" + id).style.display = "block";
+      document.getElementById("main-content").style.filter = "blur(6px)";
+    }
+
+    function closePopup(id) {
+      document.getElementById("popup" + id).style.display = "none";
+      document.getElementById("main-content").style.filter = "none";
+    }
+  </script>
+</body>
+
+</html>
